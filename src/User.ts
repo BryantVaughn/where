@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-class User {
+export class User {
   name: string;
   location: {
     lat: number;
@@ -19,7 +19,6 @@ class User {
   private generateCoordinates(): { lat: number; lng: number } {
     const lat = parseFloat(faker.address.latitude());
     const lng = parseFloat(faker.address.longitude());
-    console.log({ lat, lng });
     return { lat, lng };
   }
 }
