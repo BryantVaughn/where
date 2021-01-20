@@ -27,4 +27,8 @@ export class Company {
     const lng = parseFloat(faker.address.longitude());
     return { lat, lng };
   }
+
+  markerContent(): string {
+    return `${this.companyName} - ${this.catchPhrase}`;
+  }
 }
